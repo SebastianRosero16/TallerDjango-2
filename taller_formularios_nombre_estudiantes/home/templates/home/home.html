@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Principal</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 16px;
+        }
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+        }
+        h1 {
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        p.subtitle {
+            color: #a0aec0;
+            font-size: 1.1rem;
+            margin-bottom: 56px;
+        }
+        .cards {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 48px 40px;
+            width: 300px;
+            text-decoration: none;
+            transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+        .card .icon {
+            font-size: 3.5rem;
+            line-height: 1;
+        }
+        .card h2 {
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        .card p {
+            color: #a0aec0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .card.asistencia { border-top: 4px solid #ff8800; }
+        .card.asistencia:hover { box-shadow: 0 20px 60px rgba(255, 136, 0, 0.25); }
+        .card.solicitudes { border-top: 4px solid #667eea; }
+        .card.solicitudes:hover { box-shadow: 0 20px 60px rgba(102, 126, 234, 0.25); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Panel Principal</h1>
+        <p class="subtitle">Selecciona una opción para continuar</p>
+        <div class="cards">
+            <a href="/asistencia/" class="card asistencia">
+                <div class="icon">📋</div>
+                <h2>Asistencia</h2>
+                <p>Registra y consulta la asistencia de los estudiantes.</p>
+            </a>
+            <a href="/solicitudes/" class="card solicitudes">
+                <div class="icon">📝</div>
+                <h2>Solicitudes</h2>
+                <p>Gestiona y envía formularios de solicitud.</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
